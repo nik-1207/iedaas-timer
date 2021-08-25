@@ -1,4 +1,4 @@
-var countDownDate = new Date("Aug 25, 2021 11:023:50").getTime();
+var countDownDate = new Date("Aug 25, 2021 11:050:50").getTime();
 i = 0;
 var x = setInterval(function() {
     var title = document.getElementById("title");
@@ -24,8 +24,9 @@ function rotateOnDaysChange(days) {
         el.innerText = 0
     } else {
         el.innerText = days
-        el.style.transformStyle = "preserve-3d";
         el.style.transition = "transform 0.8s";
+        el.style.transformOrigin = "top"
+
         if (days % 2 == 0) {
             el.style.transform = "rotateX(360deg)";
         } else {
@@ -41,8 +42,10 @@ function rotateOnHoursChange(hours) {
 
     } else {
         el.innerText = hours
-        el.style.transformStyle = "preserve-3d";
         el.style.transition = "transform 0.8s";
+        el.style.transformOrigin = "top"
+
+        el.style.transformOrigin = "top"
         if (hours % 2 == 0) {
             el.style.transform = "rotateX(360deg)";
         } else {
@@ -58,8 +61,9 @@ function rotateOnMinutesChange(minutes) {
         el.innerText = 0
     } else {
         el.innerText = minutes
-        el.style.transformStyle = "preserve-3d";
         el.style.transition = "transform 0.8s";
+        el.style.transformOrigin = "top"
+
         if (minutes % 2 == 0) {
             el.style.transform = "rotateX(360deg)";
         } else {
@@ -75,8 +79,8 @@ function rotateOnSecondsChange(seconds) {
         el.innerText = 0;
     } else {
         el.innerText = seconds
-        el.style.transformStyle = "preserve-3d";
         el.style.transition = "transform 0.8s";
+        el.style.transformOrigin = "top"
         if (seconds % 2 == 0) {
             el.style.transform = "rotateX(360deg)";
         } else {

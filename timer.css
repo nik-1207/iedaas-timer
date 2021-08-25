@@ -15,7 +15,6 @@ body {
 
 .clock {
     text-align: center;
-    perspective: 1000px;
     display: flex;
     flex-direction: row;
 }
